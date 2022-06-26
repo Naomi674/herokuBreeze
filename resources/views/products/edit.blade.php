@@ -1,6 +1,5 @@
-@extends('layouts.app')
-
-@section('content')
+<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+<body>
     <div class="container-md">
         <div class="row">
             <div class="col-lg-12 margin-tb">
@@ -49,4 +48,4 @@
 
         </form>
     </div>
-@endsection
+</body>

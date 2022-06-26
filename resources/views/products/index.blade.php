@@ -1,6 +1,5 @@
-@extends('layouts.app')
-
-@section('content')
+<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+<body>
     <div class="container-md">
         <div class="row">
             <div class="col-lg-12 margin-tb">
@@ -33,7 +32,7 @@
                     <td>{{ $product->name }}</td>
                     <td>{{ $product->detail }}</td>
                     <td>
-                        <form action="{{ route('products.destroy', $product->id) }}" method="POST">
+                        <form action="{{ route('products.destroy', $products->id) }}" method="POST">
 
                             <a class="btn btn-info" href="{{ route('products.show', $product->id) }}">Show</a>
 
@@ -51,4 +50,4 @@
 
         {!! $products->links() !!}
     </div>
-@endsection
+</body>
