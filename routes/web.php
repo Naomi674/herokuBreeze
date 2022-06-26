@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\URL;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::resource('products', ProductsController::class)->middleware('auth');
+//Route::resource('products', ProductsController::class)->middleware('auth');
 Route::resource('foos', FooController::class)->middleware('auth');
 Route::get('/dashboard', function () {
     return view('dashboard');
