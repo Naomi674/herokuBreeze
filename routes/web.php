@@ -3,6 +3,7 @@ if (App::environment('production')) {
     URL::forceScheme('https');
 }
 
+use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\URL;
@@ -21,6 +22,7 @@ use Illuminate\Support\Facades\URL;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::resource('products', ProductsController::class)->middleware('auth');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
